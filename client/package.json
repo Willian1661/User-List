@@ -1,0 +1,24 @@
+{
+  "name": "user-list",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx webpack"
+  },
+  "author": "Willian1661",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "bulma": "^0.9.4",
+    "jest": "^29.6.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
