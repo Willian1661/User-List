@@ -1,7 +1,9 @@
+import React from 'react';
 const Hello = () => {
-    const greetings = document.createElement('p')
-
-
-    return greetings
+    return (
+        <p>
+            this is a component
+        </p>
+    )
 }
 export default Hello;
