@@ -1,9 +1,9 @@
 const path = require('path');
-// const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const isProduction = process.env.NODE_ENV === 'production';
 
-module.exports = {
-    mode: 'development',
+const config = {
+
     entry: {
         bundle: './src/pages/main.tsx',
     },
@@ -55,3 +55,11 @@ module.exports = {
         })
     ]
 };
+module.exports = () => {
+    if (isProduction) {
+        config.mode = 'production'
+    } else {
+        config.mode = 'development'
+    }
+    return config;
+}

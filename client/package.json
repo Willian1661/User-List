@@ -4,8 +4,11 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack"
+    "test": "jest",
+    "build:dev": "webpack --mode=development --node-env=development",
+    "build": "webpack --mode=production --node-env=production",
+    "server": "webpack server",
+    "watch": "webpack --watch"
   },
   "author": "Willian1661",
   "license": "ISC",
