@@ -5,7 +5,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const config = {
 
     entry: {
-        bundle: './src/pages/main.tsx',
+        bundle: './src/pages/index.tsx',
     },
 
     output: {
@@ -50,7 +50,7 @@ const config = {
 
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/pages/main.html',
+            template: './src/pages/index.html',
             inject: false,
         })
     ]
