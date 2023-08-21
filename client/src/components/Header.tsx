@@ -1,6 +1,6 @@
 import React from "react";
 
-const Nav: React.FC = () => {
+const Header: React.FC = () => {
     return (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
@@ -64,4 +64,4 @@ const Nav: React.FC = () => {
         </nav>
     )
 }
-export default Nav;
+export default Header;
