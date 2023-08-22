@@ -1,9 +1,9 @@
 import { fetchData } from "../api";
 
-jest.mock('../api');
+jest.mock("../api");
 
-describe('fetch all data', () => {
-    it('should return data promise', async () => {
+describe("Fetch data", () => {
+    it("should return data promise properly", async () => {
         const mockedData = [
             {
                 id: 1,
@@ -29,11 +29,11 @@ describe('fetch all data', () => {
                 }
             }
         ];
-        (fetchData as jest.Mock).mockResolvedValue(mockedData)
+        (fetchData as jest.Mock).mockResolvedValue(mockedData);
 
         const result = await fetchData();
 
-        expect(fetchData).toHaveBeenCalledTimes(1)
-        expect(result).toBe(mockedData)
+        expect(fetchData).toHaveBeenCalledTimes(1);
+        expect(result).toBe(mockedData);
     });
 });

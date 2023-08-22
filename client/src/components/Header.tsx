@@ -1,7 +1,6 @@
 import React from "react";
 
-const Header: React.FC = () => {
-    return (
+const Header: React.FC = () => (
         <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="/">
@@ -62,6 +61,5 @@ const Header: React.FC = () => {
                 </div>
             </div>
         </nav>
-    )
-}
+    );
 export default Header;
