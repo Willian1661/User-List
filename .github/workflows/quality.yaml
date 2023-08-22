@@ -19,3 +19,5 @@ jobs:
         
       - name: npm install
         run: cd client && npm install
+      - name: eslint
+        run: cd client && npm run lint
