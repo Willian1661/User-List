@@ -1,7 +1,7 @@
-import React from 'react';
-import Nav from '../components/Header';
-import Table from '../components/Table';
-import Footer from '../components/Footer';
+import React from "react";
+import Nav from "../components/Header";
+import Table from "../components/Table";
+import Footer from "../components/Footer";
 const App: React.FC = () => {
     return (
         <>
@@ -9,6 +9,6 @@ const App: React.FC = () => {
             <Table />
             <Footer/>
         </>
-    )
-}
+    );
+};
 export default App;
