@@ -1,6 +1,5 @@
 import React from "react";
-const Table : React.FC = () =>{
-    return (
+const Table : React.FC = () =>(
         <table className="table">
   <thead>
     <tr>
@@ -167,5 +166,4 @@ const Table : React.FC = () =>{
   </tbody>
 </table>
     );
-};
 export default Table;

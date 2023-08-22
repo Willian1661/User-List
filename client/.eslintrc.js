@@ -13,7 +13,11 @@ module.exports = {
     "quotes": ["error", "double"],
     "eqeqeq": 0,
     "curly": "error",
-    "@typescript-eslint/no-var-requires": 0
+    "@typescript-eslint/no-var-requires": 0,
+    "for-direction": "error",
+    "no-async-promise-executor": "error",
+    "no-empty-pattern": "error",
+    "arrow-body-style": ["error", "as-needed"]
   }
 
 };

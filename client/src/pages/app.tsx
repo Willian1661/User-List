@@ -1,14 +1,12 @@
 import React from "react";
-import Nav from "../components/Header";
+import Header from "../components/Header";
 import Table from "../components/Table";
 import Footer from "../components/Footer";
-const App: React.FC = () => {
-    return (
+const App: React.FC = () => (
         <>
-            <Nav />
+            <Header />
             <Table />
-            <Footer/>
+            <Footer />
         </>
     );
-};
 export default App;
