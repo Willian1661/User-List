@@ -166,6 +166,6 @@ const Table : React.FC = () =>{
     </tr>
   </tbody>
 </table>
-    )
-}
+    );
+};
 export default Table;

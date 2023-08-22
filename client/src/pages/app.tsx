@@ -9,6 +9,6 @@ const App: React.FC = () => {
             <Table />
             <Footer />
         </>
-    )
-}
+    );
+};
 export default App;

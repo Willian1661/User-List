@@ -1,16 +1,16 @@
-import User from "../interfaces/Users"
+import User from "../interfaces/Users";
 export const fetchData = async () => {
     try {
 
-        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        const data: User[] = await response.json()
+        const data: User[] = await response.json();
 
-        data.map(userdata => console.log(userdata))
+        data.map(userdata => console.log(userdata));
         return data;
 
     } catch (error) {
-        console.error("Error fetching data", error)
-        throw error
+        console.error("Error fetching data", error);
+        throw error;
     }
-}
+};
