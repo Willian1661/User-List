@@ -6,7 +6,6 @@ export const fetchData = async () => {
 
         const data: User[] = await response.json();
 
-        data.map(userdata => console.log(userdata));
         return data;
 
     } catch (error) {
