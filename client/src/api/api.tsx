@@ -6,7 +6,9 @@ export const fetchData = async () => {
 
         const data: User[] = await response.json();
 
-        return data;
+        const user = data[0];
+
+        return { allUsers: data, user };
 
     } catch (error) {
         console.error("Error fetching data", error);
