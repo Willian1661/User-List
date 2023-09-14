@@ -1,9 +1,11 @@
 import React from "react";
 import User from "../interfaces/Users";
+import { fetchData } from "../api/api";
 
 interface prop {
   data: User[]
 }
+const { user } = await fetchData();
 const Table: React.FC<prop> = ({ data }) => (
   <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
     <thead>
@@ -12,10 +14,10 @@ const Table: React.FC<prop> = ({ data }) => (
         <th>Name</th>
         <th><abbr title="UserName">UN</abbr></th>
         <th><abbr title="Email">E</abbr></th>
-        <th><abbr title="Adress">Add</abbr></th>
+        <th><abbr title="Adress">Add</abbr><i className="fas fa-angle-down mx-3" aria-hidden="true"></i></th>
         <th><abbr title="Phone">PH</abbr></th>
         <th><abbr title="WebSite">WB</abbr></th>
-        <th><abbr title="Company">CO</abbr></th>
+        <th><abbr title="Company">CO</abbr><i className="fas fa-angle-down mx-3" aria-hidden="true"></i></th>
       </tr>
     </thead>
     <tfoot>
