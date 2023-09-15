@@ -1,12 +1,10 @@
 import User from "../interfaces/Users";
 const showProperties = (userResponse: User) => (
-    Object.values(userResponse).map(value => {
-        if (typeof value === 'object') {
-            console.log('has object nested');
-
-            return true
+    Object.values(userResponse).filter(value => {
+        if (typeof value === 'object' && value !== null) {
+            return value
         } else {
-            return false
+            return false;
         }
     })
 )
