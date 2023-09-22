@@ -13,7 +13,8 @@ module.exports = {
     "quotes": ["error", "double"],
     "eqeqeq": 0,
     "curly": "error",
-    "@typescript-eslint/no-var-requires": 0
+    "@typescript-eslint/no-var-requires": 0,
+    "@typescript-eslint/no-explicit-any": 0
   }
 
 };

@@ -3,9 +3,9 @@ import React from "react";
 const DropDown = () => {
 
     React.useEffect(() => {
-        const dropId = document.getElementById('dropid');
-        const dropDownButton = document.getElementById('dropDownButton');
-        dropDownButton.addEventListener('click', () => dropId.classList.toggle('is-active'))
+        const dropId = document.getElementById("dropid");
+        const dropDownButton = document.getElementById("dropDownButton");
+        dropDownButton.addEventListener("click", () => dropId.classList.toggle("is-active"));
     }, []);
 
     return (
@@ -44,5 +44,5 @@ const DropDown = () => {
             </div>
         </div>
     );
-}
+};
 export default DropDown;
