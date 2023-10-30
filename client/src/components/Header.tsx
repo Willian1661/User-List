@@ -1,67 +1,34 @@
 import React from "react";
 
-const Nav: React.FC = () => {
-    return (
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-            <div className="navbar-brand">
-                <a className="navbar-item" href="/">
-                    <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28" />
-                </a>
+const Nav: React.FC = () => (
+    <nav className="navbar is-link px-6 is-fixed-top" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+            <a className="navbar-item" href="/">
+                <i className="fas fa-users fa-2xl"></i>
+                <h1 className="title is-4 px-2">User List</h1>
+            </a>
 
-                <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+            <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBurguer">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBurguer" className="navbar-menu">
+            <div className="navbar-start">
+                <div className="navbar-item display: flex;"></div>
             </div>
 
-            <div id="navbarBasicExample" className="navbar-menu">
-                <div className="navbar-start">
-                    <a className="navbar-item">
-                        Home
-                    </a>
-
-                    <a className="navbar-item">
-                        Documentation
-                    </a>
-
-                    <div className="navbar-item has-dropdown is-hoverable">
-                        <a className="navbar-link">
-                            More
-                        </a>
-
-                        <div className="navbar-dropdown">
-                            <a className="navbar-item">
-                                About
-                            </a>
-                            <a className="navbar-item">
-                                Jobs
-                            </a>
-                            <a className="navbar-item">
-                                Contact
-                            </a>
-                            <hr className="navbar-divider" />
-                            <a className="navbar-item">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="navbar-end">
-                    <div className="navbar-item">
-                        <div className="buttons">
-                            <a className="button is-primary">
-                                <strong>Sign up</strong>
-                            </a>
-                            <a className="button is-light">
-                                Log in
-                            </a>
-                        </div>
-                    </div>
+            <div className="navbar-end">
+                <div className="navbar-item display: flex;">
+                    <input className="input is-small pr-6" type="text" placeholder="Search" />
+                    <button className="button is-small is-info is-hovered">
+                        <i className="fas fa-magnifying-glass"></i>
+                    </button>
                 </div>
             </div>
-        </nav>
-    );
-};
+        </div>
+    </nav>
+);
 export default Nav;
