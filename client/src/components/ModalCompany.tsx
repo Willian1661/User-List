@@ -1,9 +1,10 @@
 import React, { ReactNode } from "react";
+import User from "../interfaces/Users";
 interface props {
-    children: ReactNode,
-    data: Record<string, any>
+    title: ReactNode,
+    data: User[]
 }
-const ModalCompany: React.FC<props> = ({ children, data }) => {
+const ModalCompany: React.FC<props> = ({ title, data }) => {
 
     const closeAllModals = () => {
         const modalFeatures = document.querySelectorAll(".modal-background, .modal-close");//.modal-card-head .delete, .modal-card-foot
@@ -24,8 +25,8 @@ const ModalCompany: React.FC<props> = ({ children, data }) => {
     };
 
     React.useEffect(() => {
-        const modal = document.getElementById("modal");
-        const modalButton = document.getElementById("modalCompany");
+        const modal = document.getElementById("show-modal-company");
+        const modalButton = document.getElementById("modal-company");
 
         modalButton.addEventListener("click", () => {
             modal.classList.add("is-active");
@@ -33,23 +34,44 @@ const ModalCompany: React.FC<props> = ({ children, data }) => {
         closeAllModals();
     }, []);
 
+    const printTableTB = (dataTobBottom: User[]) => {
+        return (
+            Object.keys(dataTobBottom[0].company)
+                .map(key => (
+                    <th key={key}>{key.toUpperCase()}</th>)
+                )
+        )
+    };
+
     return (
-        <div id="modalCompany" className="container is-fullhd is-flex">
-            {children}
+        <div id="modal-company" className="container is-fullhd is-flex">
+            {title}
             <span className="ml-auto mr-2 justify-content">
                 <i className="fas fa-angle-down" aria-hidden="true"></i>
             </span>
-            <div id="modal" className="modal">
+            <div id="show-modal-company" className="modal">
                 <div className="modal-background"></div>
                 <div className="modal-content">
-                    <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
+                    <table className="table is-bordered is-striped is-hoverable is-fullwidth">
                         <thead>
                             <tr>
-                                {
-                                    Object.keys(data).map(key => <th key={key}>{key}</th>)
-                                }
+                                {printTableTB(data)}
                             </tr>
                         </thead>
+                        <tbody>
+                            {data.map(dataValue => (
+                                <tr className="has-text-weight-normal" key={dataValue.id}>
+                                    <td>{dataValue.company.name}</td>
+                                    <td>{dataValue.company.catchPhrase}</td>
+                                    <td>{dataValue.company.bs}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                {printTableTB(data)}
+                            </tr>
+                        </tfoot>
                     </table>
                 </div>
                 <button className="modal-close is-large" aria-label="close"></button>

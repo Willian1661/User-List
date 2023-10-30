@@ -13,24 +13,24 @@ const Table: React.FC<prop> = ({ data }) => {
     <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth ">
       <thead>
         <tr>
-          <th>ID</th>
+          <th>Id</th>
           <th>Name</th>
-          <th>UserName</th>
+          <th>Username</th>
           <th>Email</th>
           <th className="is-flex is-clickable">
-            <ModalAddress children='Address' data={user.address} />
+            <ModalAddress title='Address' data={data} />
           </th>
           <th>PH</th>
           <th>WB</th>
           <th className="is-flex is-clickable">
-            <ModalCompany children='Company' data={user.company} />
+            <ModalCompany title='Company' data={data} />
           </th>
         </tr>
       </thead>
       <tfoot>
         <tr>
           {
-            Object.keys(user).map(key => <th key={key}>{key}</th>)
+            Object.keys(user).map(key => <th key={key}>{key.charAt(0).toUpperCase() + key.slice(1)}</th>)
           }
 
         </tr>
